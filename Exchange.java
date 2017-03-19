@@ -36,16 +36,14 @@ public class Exchange {
         for (int i = 0; i < priceDelta.length; ++i) {
             int newDelta = priceDelta[i];
             if (firstDayNumbers == 0) {
-                firstDayNumbers = i;
-                lastDayNumbers = i + 1;
+                firstDayNumbers = i; lastDayNumbers = i + 1;
                 earningNumbers = newDelta;
             } else {
                 earningNumbers = earningNumbers + newDelta;
                 ++lastDayNumbers;
             }
             if (earningNumbers <= 0) {
-                firstDayNumbers = 0;
-                lastDayNumbers = 0;
+                firstDayNumbers = 0; lastDayNumbers = 0;
                 earningNumbers = 0;
             } else if (earningNumbers > earnings) {
                 firstDay = firstDayNumbers;
