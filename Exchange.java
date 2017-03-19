@@ -17,7 +17,6 @@ public class Exchange {
 
         int priceArray[] = {100, 113, 110, 85, 105, 102, 86, 63, 81, 101, 94, 106, 101, 79, 94};
 
-        System.out.print("?????? ???? ?????: ");
         for (Integer iPrice = 0; iPrice < priceArray.length; iPrice++) {
             String s = Integer.toString(priceArray[iPrice]);
             System.out.print(s + "," + " ");
@@ -25,7 +24,7 @@ public class Exchange {
 
 
         Integer priceDelta[] = new Integer[priceArray.length - 1];
-        System.out.println("\n");
+        
         for (int i = 0; i < priceDelta.length; i++) {
             priceDelta[i] = priceArray[i + 1] - priceArray[i];
             String s = Integer.toString(priceDelta[i]);
@@ -56,17 +55,11 @@ public class Exchange {
             }
         }
 
-        System.out.print("???????????? ????????? ?????? ");
-        for (int i = firstDay; i < lastDay; ++i) {
-            String s = Integer.toString(priceDelta[i]);
-            System.out.print(s + "," + " ");
-        }
-        System.out.print("\n");
-
-        System.out.print("??????? " + Integer.toString(firstDay + 1) + " " +
-                "- ???? " + Integer.toString(priceArray[firstDay]) +
-                ", ??????? " + Integer.toString(lastDay + 1) + " " +
-                "- ???? " + Integer.toString(priceArray[lastDay]) + "\n");
-        System.out.print(", ?????? ???????: " + Integer.toString(earnings));
+        
+        System.out.print("\nPurchase: day " + Integer.toString(firstDay + 1) + 
+                " for " + Integer.toString(priceArray[firstDay]) +
+                ";\nSale: day " + Integer.toString(lastDay + 1)  +
+                " for " + Integer.toString(priceArray[lastDay]) + ";\n");
+        System.out.print("Earnings: " + Integer.toString(earnings));
     }
 }
