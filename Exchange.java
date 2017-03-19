@@ -18,7 +18,7 @@ public class Exchange {
         int priceArray[] = {100, 113, 110, 85, 105, 102, 86, 63, 81, 101, 94, 106, 101, 79, 94}; // ?????? ??????
         //int Price[] = {10, 11, 7, 10, 6}; // ?????? ??????
 
-        System.out.print("?????? ???? ?????: ");
+        System.out.print("Массив цены акций: ");
         for (Integer iPrice = 0; iPrice < priceArray.length; iPrice++) {
             String s = Integer.toString(priceArray[iPrice]);
             System.out.print(s + "," + " ");
